@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce8b59f3-509a-4dcd-951a-98ed64d5eb6c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/map.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Execution.js" beforeDir="false" afterPath="$PROJECT_DIR$/Execution.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forEach.js" beforeDir="false" afterPath="$PROJECT_DIR$/forEach.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,32 +22,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Execution.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Execution.js">
+      <file leaf-file-name="filter.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/filter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="40" column="21" lean-forward="true" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forEach.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/forEach.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
+            <state relative-caret-position="264">
+              <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="map.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/map.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -75,6 +55,7 @@
         <option value="$PROJECT_DIR$/forEach.js" />
         <option value="$PROJECT_DIR$/Execution.js" />
         <option value="$PROJECT_DIR$/map.js" />
+        <option value="$PROJECT_DIR$/filter.js" />
       </list>
     </option>
   </component>
@@ -85,7 +66,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="126" />
+    <option name="x" value="168" />
     <option name="y" value="23" />
     <option name="width" value="1152" />
     <option name="height" value="720" />
@@ -157,17 +138,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.map.js">
+  <component name="RunManager" selected="Node.js.filter.js">
     <configuration name="Execution.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="Execution.js" working-dir="$PROJECT_DIR$" />
+    <configuration name="filter.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="filter.js" working-dir="$PROJECT_DIR$" />
     <configuration name="forEach.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="forEach.js" working-dir="$PROJECT_DIR$" />
     <configuration name="map.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="map.js" working-dir="$PROJECT_DIR$" />
     <list>
       <item itemvalue="Node.js.Execution.js" />
       <item itemvalue="Node.js.forEach.js" />
       <item itemvalue="Node.js.map.js" />
+      <item itemvalue="Node.js.filter.js" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.filter.js" />
         <item itemvalue="Node.js.map.js" />
         <item itemvalue="Node.js.Execution.js" />
         <item itemvalue="Node.js.forEach.js" />
@@ -184,15 +168,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1528533047297</updated>
-      <workItem from="1528533048848" duration="15242000" />
+      <workItem from="1528533048848" duration="17130000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15242000" />
+    <option name="totallyTimeSpent" value="17130000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="126" y="23" width="1152" height="720" extended-state="0" />
+    <frame x="168" y="23" width="1152" height="720" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -251,8 +235,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+        <state relative-caret-position="289">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/filter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
