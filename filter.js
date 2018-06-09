@@ -57,3 +57,51 @@ function commentsForPost(post, comments) {
 }
 let filteredPost = commentsForPost(post, comments);
 console.log(filteredPost);
+
+/*
+* Another Example
+* ================================================*/
+
+const users = [
+    {id: 1, admin: true},
+    {id: 2, admin: false},
+    {id: 3, admin: true},
+    {id: 5, admin: false},
+    {id: 4, admin: true},
+    {id: 6, admin: false}
+];
+
+function adminLevel(users){
+    return users.filter((user) =>{
+        return user.admin === true;
+    });
+}
+
+const filteredAdminLevel = adminLevel(users);
+console.log(filteredAdminLevel);
+
+/*
+* opposite
+* ===============================================================*/
+function adminFakeLevelFalse(users){
+    return users.filter((user) =>{
+        return user.admin !== true;
+    });
+}
+
+const filteredFakeAdmin= adminFakeLevelFalse(users);
+console.log(filteredFakeAdmin);
+
+/*
+* Reject Function
+* ========================================================*/
+const numbers = [10, 20, 30];
+function reject(numbers) {
+    return numbers.filter((num) =>{
+        return num <= 15;
+    })
+}
+let lessThanFifteen = reject(numbers);
+console.log(lessThanFifteen);
+
+
