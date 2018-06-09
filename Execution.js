@@ -34,8 +34,13 @@ function multiplyBy2(inputNumber) {
  const myArray = [1,4,6];
  let result = copyArrayAndMultiplyBy2(myArray);
  result.forEach((item) => {
-     console.log(item);
+     console.log(`from forEach helper: ${item}`);
  });
+
+ let timesTen = result.map((item) => {
+    return item * 10;
+ });
+ console.log(`from the map helper: ${timesTen}`);
 
 // function copyArrayAndManipulate(array, instructions) {
 //     let output = [];
