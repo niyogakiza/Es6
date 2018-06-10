@@ -10,43 +10,6 @@
 //     //p.remove();
 // });
 
-const todos = [
-    {
-        text: 'Order cat food',
-        completed: false
-    },
-    {
-        text: 'Clean Kitchen',
-        completed: true
-    },
-    {
-        text: 'Buy food',
-        completed: true
-    },
-    {
-        text: 'Do work',
-        completed: false
-    },
-    {
-        text: 'Exercises',
-        completed: true
-    }
-
-];
-const incompleteTodos = todos.filter((todo) => {
-    return todo.completed === false;
-});
-
-const summary = document.createElement('h4');
-summary.textContent = `You have ${incompleteTodos.length} todos left`;
-document.querySelector('body').appendChild(summary);
-
-todos.forEach((todo) => {
-    const allTodos = document.createElement('p');
-    allTodos.textContent = todo.text;
-    document.querySelector('body').appendChild(allTodos);
-});
-
 
 
 
@@ -72,17 +35,20 @@ const filters = {
 };
 const renderNotes = function(notes, filters){
     const filteredNotes = notes.filter((note) =>{
-        return note.title.toLowerCase().includes(filters.searchText);
+        return note.title.toLowerCase().includes(filters.searchText.toLowerCase());
     });
+    document.querySelector('#notes').innerHTML = '';
+
    filteredNotes.forEach((note) =>{
-       const noteEl = document.createElement('h5');
+       const noteEl = document.createElement('p');
        noteEl.textContent = note.title;
-       document.querySelector('body').appendChild(noteEl);
+       document.querySelector('#notes').appendChild(noteEl);
    })
 };
 renderNotes(notes, filters);
 
 document.querySelector('#addAll').addEventListener("click", (e) => {
+
 
 });
 document.querySelector('.input').addEventListener("input", (e) =>{
@@ -90,7 +56,7 @@ document.querySelector('.input').addEventListener("input", (e) =>{
     renderNotes(notes, filters)
 });
 document.querySelector('#removeAll').addEventListener("click", () => {
-    document.querySelectorAll('.note').forEach((note) => {
+    document.querySelectorAll('#notes').forEach((note) => {
         note.remove();
     })
 });
@@ -108,7 +74,6 @@ const newParagraph = document.createElement('p');
 newParagraph.textContent = 'This is a new element we added';
 document.querySelector('body').appendChild(newParagraph);
 
-//
 
 
 
