@@ -74,6 +74,15 @@ const newParagraph = document.createElement('p');
 newParagraph.textContent = 'This is a new element we added';
 document.querySelector('body').appendChild(newParagraph);
 
+//form
+document.querySelector('#inputName').addEventListener('submit', function(e){
+    e.preventDefault();
+    e.target.elements.name.value = '';
+
+
+
+});
+
 
 
 
