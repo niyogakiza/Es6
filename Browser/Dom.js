@@ -14,25 +14,45 @@
 
 
 
-const notes = [
-    {
-        title: 'my next trip',
-        body: 'I would like to go to Spain'
-    },
-    {
-        title: 'Habbits to work on',
-        body: 'Exercise. Eating a bit better'
-    },
-    {
-        title: 'Office modification',
-        body: 'Get a new seat'
-    }
+// const notes = [
+//     {
+//         title: 'my next trip',
+//         body: 'I would like to go to Spain'
+//     },
+//     {
+//         title: 'Habbits to work on',
+//         body: 'Exercise. Eating a bit better'
+//     },
+//     {
+//         title: 'Office modification',
+//         body: 'Get a new seat'
+//     }
+//
+// ];
 
-];
+let notes = [];
 
 const filters = {
     searchText: ''
 };
+
+// const noteJson = JSON.stringify(notes);
+// console.log(noteJson);
+// localStorage.setItem('notes', noteJson);
+
+const noteJson = localStorage.getItem('notes');
+
+if(noteJson !== null){
+    notes = JSON.parse(noteJson);
+}
+// const note = JSON.parse(noteJson); // the data must be stored before
+// console.log(`${note.text} is ${note.body}`);
+
+//localStorage.setItem('location', 'Birmigham');
+//localStorage.getItem('location');
+//localStorage.removeItem('location');
+//localStorage.clear();
+
 const renderNotes = function(notes, filters){
     const filteredNotes = notes.filter((note) =>{
         return note.title.toLowerCase().includes(filters.searchText.toLowerCase());
@@ -41,15 +61,24 @@ const renderNotes = function(notes, filters){
 
    filteredNotes.forEach((note) =>{
        const noteEl = document.createElement('p');
-       noteEl.textContent = note.title;
+
+       if(note.title.length > 0){
+           noteEl.textContent = note.title;
+       } else {
+           noteEl.textContent = 'Unnamed note'
+       }
        document.querySelector('#notes').appendChild(noteEl);
    })
 };
 renderNotes(notes, filters);
 
 document.querySelector('#addAll').addEventListener("click", (e) => {
-
-
+    notes.push({
+        title:'',
+        body: ''
+    });
+    localStorage.setItem('notes', JSON.stringify('notes'));
+    renderNotes(notes, filters)
 });
 document.querySelector('.input').addEventListener("input", (e) =>{
    filters.searchText = e.target.value;
@@ -78,8 +107,13 @@ document.querySelector('body').appendChild(newParagraph);
 document.querySelector('#inputName').addEventListener('submit', function(e){
     e.preventDefault();
     e.target.elements.name.value = '';
+});
 
+document.querySelector('#gridRadios1').addEventListener('change', function (e) {
+    e.target.checked
+});
 
+document.querySelector('#filter-by').addEventListener('change', function(e){
 
 });
 

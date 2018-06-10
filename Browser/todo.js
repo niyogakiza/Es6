@@ -1,33 +1,43 @@
-const todos = [
-    {
-        text: 'Order cat food',
-        completed: false
-    },
-    {
-        text: 'Clean Kitchen',
-        completed: true
-    },
-    {
-        text: 'Buy food',
-        completed: true
-    },
-    {
-        text: 'Do work',
-        completed: false
-    },
-    {
-        text: 'Exercises',
-        completed: true
-    }
+// const todos = [
+//     {
+//         text: 'Order cat food',
+//         completed: false
+//     },
+//     {
+//         text: 'Clean Kitchen',
+//         completed: true
+//     },
+//     {
+//         text: 'Buy food',
+//         completed: true
+//     },
+//     {
+//         text: 'Do work',
+//         completed: false
+//     },
+//     {
+//         text: 'Exercises',
+//         completed: true
+//     }
+//
+// ];
 
-];
+let todos = [];
 const searchTodo = {
-    filters: ''
+    filters: '',
+    hideCompleted: false
 };
 
+const todoJSON = localStorage.getItem('todos');
+if(todoJSON !== null){
+    todos = JSON.parse(todoJSON);
+}
+
 const filteredTodo = function(todos, searchTodo){
-    const filtered = todos.filter((todo) => {
-        return todo.text.toLowerCase().includes(searchTodo.filters.toLowerCase());
+    let filtered = todos.filter((todo) => {
+        const searchTextMatch = todo.text.toLowerCase().includes(searchTodo.filters.toLowerCase());
+        const hideCompletedMatch = !searchTodo.hideCompleted || !todo.completed;
+        return searchTextMatch && hideCompletedMatch;
     });
 
     const incompleteTodos = todos.filter((todo) => {
@@ -69,6 +79,12 @@ document.querySelector('#remove').addEventListener("click", function () {
     document.querySelectorAll('#todos').forEach((todo)=>{
         todo.remove();
     })
+});
+
+document.querySelector('#hide-completed').addEventListener('change', function (e) {
+    searchTodo.hideCompleted = e.target.checked;
+    filteredTodo(todos, searchTodo);
+
 });
 
 
