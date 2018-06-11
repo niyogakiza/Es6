@@ -71,6 +71,8 @@ document.querySelector('#newTodo').addEventListener('submit', function(e){
         text: e.target.elements.text.value,
         completed: false
     });
+    localStorage.setItem('todos', JSON.stringify(todos)); //Storing data
+
     filteredTodo(todos, searchTodo);
     e.target.elements.text.value = '';
 });

@@ -28,14 +28,104 @@
         </ul>
     </div>
 </nav>
-<div id="he" class="container">
-   <div id="twenty"></div>
-    <div id="fourty"></div>
-    <p id="one"></p>
-    <button type="button"  id="btn" role="button" class="btn btn-primary">Display</button>
+<div>
+    <h1>Todo</h1>
+    <!--<p class="note">The First paragraph</p>-->
+    <!--<p>Second paragraph</p>-->
+    <!--<p>The Third paragraph</p>-->
+    <!--<p class="note">Fourth paragraph</p>-->
+    <!--<p class="note">Fifth paragraph</p>-->
+    <input id="todo" type="text" placeholder="filter todos">
+    <select id="filter-by">
+        <option value="byEdited">Sort by last edited</option>
+        <option value="byCreated">Sort by recently created</option>
+        <option value="byAlphabet">Sort alphabetically</option>
+    </select>
+    <!--<button type="button"  class="btn btn-primary">filter</button>-->
+    <!--<hr/>-->
+
+    <div id="todos"></div>
+    <form id="newTodo">
+        <input type="text" placeholder="Add todos" name="text">
+        <button type="submit" class="btn btn-success">Add</button>
+        <button type="button" class="btn btn-danger" id="remove">Delete</button>
+        <div class="form-group row">
+            <div class="col-sm-2">Checkbox</div>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="hide-completed">
+                    <label class="form-check-label" for="hide-completed">
+                        Hide Completed
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr/>
+
+        <div class="row">
+            <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                    <label class="form-check-label" for="gridRadios1">
+                        First radio
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                    <label class="form-check-label" for="gridRadios2">
+                        Second radio
+                    </label>
+                </div>
+                <div class="form-check disabled">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+                    <label class="form-check-label" for="gridRadios3">
+                        Third disabled radio
+                    </label>
+                </div>
+            </div>
+        </div>
+
+    </form>
+    <hr/>
+    <!--<button type="button" id="delete" role="button" class="btn btn-success">Delete</button>-->
+    <form>
+        <div class="form-group row">
+            <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputName" name="name" placeholder="Name">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+                <input type="Email" class="form-control" id="inputEmail3" placeholder="Email">
+            </div>
+        </div>
+        <fieldset class="form-group">
+
+        </fieldset>
+
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <button type="submit" class="btn btn-primary">Sign in</button>
+            </div>
+        </div>
+    </form>
+
+    <hr/>
+
+    <input class="input" type="text">
+    <div class="container" id="notes">
+
+    </div>
+    <button id="addAll"type="button" role="button" class="btn btn-warning">Add</button>
+    <button id="removeAll" type="button" role="button" class="btn btn-danger">Delete</button>
 </div>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="Execution.js"></script>
+<script type="text/javascript" src="./Browser/Dom/Dom.js"></script>
+<script type="text/javascript" src="./Browser/Dom/Dom_functions.js"></script>
+<script type="text/javascript" src="./Browser/todo.js"></script>
 </body>
 </html>
